@@ -15,8 +15,12 @@ function saludar() {
         greeting = "Buenas noches";
     }
 
-    if (name) {
-        greeting += `, ${name}`;
+    if (gender === "masculino") {
+        greeting += `, Sr. ${name || ""}`;
+    } else if (gender === "femenino") {
+        greeting += `, Sra. ${name || ""}`;
+    } else {
+        greeting += `, ${name || ""}`;
     }
 
     greetingElement.textContent = greeting;
