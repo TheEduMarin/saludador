@@ -1,4 +1,10 @@
 function saludar() {
+    const name = document.getElementById('name').value;
     const greetingElement = document.getElementById('greeting');
-    greetingElement.textContent = "Hola";
+    
+    if (name) {
+        greetingElement.textContent = `Hola, ${name}!`;
+    } else {
+        greetingElement.textContent = "Hola";
+    }
 }
