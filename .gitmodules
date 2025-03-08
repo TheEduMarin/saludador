@@ -1,0 +1,3 @@
+[submodule "TDDLabBaseProject"]
+	path = TDDLabBaseProject
+	url = https://github.com/usuario/TDDLabBaseProject.git
