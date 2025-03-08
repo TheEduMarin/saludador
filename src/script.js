@@ -1,10 +1,23 @@
 function saludar() {
     const name = document.getElementById('name').value;
+    const gender = document.getElementById('gender').value;
+    const age = document.getElementById('age').value;
     const greetingElement = document.getElementById('greeting');
-    
-    if (name) {
-        greetingElement.textContent = `Hola, ${name}!`;
+
+    const hours = new Date().getHours();
+    let greeting = "";
+
+    if (hours >= 6 && hours < 12) {
+        greeting = "Buenos días";
+    } else if (hours >= 12 && hours < 18) {
+        greeting = "Buenas tardes";
     } else {
-        greetingElement.textContent = "Hola";
+        greeting = "Buenas noches";
     }
+
+    if (name) {
+        greeting += `, ${name}`;
+    }
+
+    greetingElement.textContent = greeting;
 }
